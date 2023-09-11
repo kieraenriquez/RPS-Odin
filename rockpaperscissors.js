@@ -31,14 +31,14 @@ function playRound(playerSelection, computerSelection) {
     return output;
 }
 
-function getMessageToPlauer(gameVal, playerSelection, computerSelection) {
+function getMessageToPlayer(gameVal, playerSelection, computerSelection) {
     let playerMessage = '';
     switch (gameVal) {
         case 0:
-            playerMessage = "You Lose! " + computerSelection + " beats " + playerSelection + "!";
+            playerMessage = "You Lose, " + computerSelection + " beats " + playerSelection + "!";
             break;
         case 1:
-            playerMessage = "You Win! " + playerSelection + " beats " + computerSelection + "!";
+            playerMessage = "You Win, " + playerSelection + " beats " + computerSelection + "!";
             break;
         case 2:
             playerMessage = "It's a tie! I picked the same thing as you..."
