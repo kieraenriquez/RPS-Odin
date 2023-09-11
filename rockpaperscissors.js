@@ -64,7 +64,10 @@ function playerChoice() {
 }
 
 function game() {
-    let player = playerChoice();
-    let computer = getComputerChoice();
-    alert(playRound(player, computer));
+    for (let i = 0; i < 5; i++) {
+        alert("Round " + i);
+        let player = playerChoice();
+        let computer = getComputerChoice();
+        alert(playRound(player, computer));
+    }
 }
