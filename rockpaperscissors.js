@@ -10,7 +10,7 @@ function getComputerChoice() {
     return rand;
 }
 
-function playRound (playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
     let playerWins = 0;
     if (computerSelection == playerSelection) {
         playerWins = 2;
@@ -27,6 +27,21 @@ function playRound (playerSelection, computerSelection) {
             }
         }
     }
-    let output = getMessageToPlayer();
+    let output = getMessageToPlayer(playerWins, playerSelection, computerSelection);
     return output;
+}
+
+function getMessageToPlauer(gameVal, playerSelection, computerSelection) {
+    let playerMessage = '';
+    switch (gameVal) {
+        case 0:
+            playerMessage = "You Lose! " + computerSelection + " beats " + playerSelection + "!";
+            break;
+        case 1:
+            playerMessage = "You Win! " + playerSelection + " beats " + computerSelection + "!";
+            break;
+            case 2:
+                playerMessage = "It's a tie! I picked the same thing as you..."
+                break;
+    }
 }
