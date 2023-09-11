@@ -57,5 +57,11 @@ function playerChoice() {
         alert("Well, it looks like you've chosen scissors!");
         playerChoice = "scissors";
     }
-    return plauerChoice;
+    return playerChoice;
+}
+
+function game() {
+    let player = playerChoice();
+    let computer = getComputerChoice();
+    alert(playRound(player, computer));
 }
