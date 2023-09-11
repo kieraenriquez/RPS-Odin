@@ -24,7 +24,7 @@ function playRound(playerSelection, computerSelection) {
                 playerWins = 1;
             }
         } else {
-            if (playerSelection == "scissors") {
+            if (playerSelection == "rock") {
                 playerWins = 1;
             }
         }
