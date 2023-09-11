@@ -70,5 +70,5 @@ function game() {
         let computer = getComputerChoice();
         alert(playRound(player, computer));
     }
-    alert("Game over! Your score is " + winCount + " out of 5.");
+    alert("Game over! Your score is " + (winCount + 1) + " out of 5.");
 }
