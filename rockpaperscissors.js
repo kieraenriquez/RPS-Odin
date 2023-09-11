@@ -40,8 +40,22 @@ function getMessageToPlauer(gameVal, playerSelection, computerSelection) {
         case 1:
             playerMessage = "You Win! " + playerSelection + " beats " + computerSelection + "!";
             break;
-            case 2:
-                playerMessage = "It's a tie! I picked the same thing as you..."
-                break;
+        case 2:
+            playerMessage = "It's a tie! I picked the same thing as you..."
+            break;
     }
+    return playerMessage;
+}
+
+function playerChoice() {
+    let playerChoice = confirm("Rock! Paper! Scissors! Do you want to choose Rock?");
+    if (playerChoice == true) {
+        playerChoice = "rock";
+    } else if (confirm("How about paper?")) {
+        playerChoice = "paper";
+    } else {
+        alert("Well, it looks like you've chosen scissors!");
+        playerChoice = "scissors";
+    }
+    return plauerChoice;
 }
