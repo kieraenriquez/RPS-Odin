@@ -10,6 +10,23 @@ function getComputerChoice() {
     return rand;
 }
 
-// DEBUG:
-    let choice = getComputerChoice();
-    console.log(choice);
+function playRound (playerSelection, computerSelection) {
+    let playerWins = 0;
+    if (computerSelection == playerSelection) {
+        playerWins = 2;
+    } else if (computerSelection == "rock") {
+        if (playerSelection == "paper") {
+            playerWins = 1;
+        } else if (computerSelection == "paper") {
+            if (playerSelection == "scissors") {
+                playerWins = 1;
+            }
+        } else {
+            if (playerSelection == "scissors") {
+                playerWins = 1;
+            }
+        }
+    }
+    let output = getMessageToPlayer();
+    return output;
+}
