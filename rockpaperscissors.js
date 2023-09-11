@@ -1,18 +1,15 @@
 function getComputerChoice() {
-    let rand = Math.random(0, 2);
-    switch (rand) {
-        case 0:
+    let rand = Math.floor(Math.random() * 3);
+    if (rand === 0) {
         rand = "rock";
-        break;
-        case 1:
+    } else if (rand === 1) {
         rand = "paper";
-        break;
-        case 2:
+    } else {
         rand = "scissors";
-        break;
     }
     return rand;
 }
 
 // DEBUG:
-console.log(getComputerChoice);
+    let choice = getComputerChoice();
+    console.log(choice);
