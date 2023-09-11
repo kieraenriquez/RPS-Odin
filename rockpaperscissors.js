@@ -19,33 +19,29 @@ function playRound(playerSelection, computerSelection) {
     } else if (computerSelection == "rock") {
         if (playerSelection == "paper") {
             playerWins = 1;
-        } else if (computerSelection == "paper") {
-            if (playerSelection == "scissors") {
-                playerWins = 1;
-            }
-        } else {
-            if (playerSelection == "rock") {
-                playerWins = 1;
-            }
+        }
+    } else if (computerSelection == "paper") {
+        if (playerSelection == "scissors") {
+            playerWins = 1;
+        }
+    } else {
+        if (playerSelection == "rock") {
+            playerWins = 1;
         }
     }
-    winCount += playerWins;
+    winCount = winCount + playerWins;
     let output = getMessageToPlayer(playerWins, playerSelection, computerSelection);
     return output;
 }
 
 function getMessageToPlayer(gameVal, playerSelection, computerSelection) {
     let playerMessage = '';
-    switch (gameVal) {
-        case 0:
-            playerMessage = "You Lose, " + computerSelection + " beats " + playerSelection + "!";
-            break;
-        case 1:
-            playerMessage = "You Win, " + playerSelection + " beats " + computerSelection + "!";
-            break;
-        case 0.5:
-            playerMessage = "It's a tie! I picked the same thing as you..."
-            break;
+    if (gameVal === 0) {
+        playerMessage = "You Lose, " + computerSelection + " beats " + playerSelection + "!";
+    } else if (gameVal === 1) {
+        playerMessage = "You Win, " + playerSelection + " beats " + computerSelection + "!";
+    } else if (gameVal === 0.5) {
+        playerMessage = "It's a tie! I picked the same thing as you..."
     }
     return playerMessage;
 }
